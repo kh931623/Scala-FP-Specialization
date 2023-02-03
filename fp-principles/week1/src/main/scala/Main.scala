@@ -19,9 +19,7 @@ def pascal(c: Int, r: Int): Int =
  */
 def balance(chars: List[Char]): Boolean =
   def innerBalance(stack: List[Char], chars: List[Char]): Boolean = 
-    if chars.length == 0 then
-      if stack.length == 0 then true
-      else false 
+    if chars.length == 0 then stack.length == 0
     else 
       if chars.head == '(' then innerBalance('('::stack, chars.tail)
       else if chars.head == ')' then 
